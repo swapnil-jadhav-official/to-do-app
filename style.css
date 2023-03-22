@@ -1,0 +1,180 @@
+* {
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+  }
+  body{
+    background-image: linear-gradient(to right, #4ab0ff, #387dfe);
+  }
+  #container {
+    width: 500px;
+    margin: 0 auto;
+  }
+
+  /* Completed / Pending / Show all tasks  */
+  .status-container .status{
+    display: flex;
+    flex-direction: row;
+    position: relative;
+  }
+  .action{
+    border-radius: 5px;
+    padding: 10px;
+    cursor: pointer;
+  }
+  
+  /* Clear All Tasks Button */
+  .clear{
+    color: white;
+    position: absolute;
+    right: 0%;
+    text-align: right;
+    background-image: linear-gradient(to right, #387dfe, #4ab0ff); 
+  }
+  .clear:hover{
+    background-color: #4ab0ff;
+  }
+
+ /* Unordered List to show all tasks */
+  ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    background-color: #edf1f3;
+    border-radius: 10px;
+  }
+  #list li {
+    border-radius: 10px;
+    padding: 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: inherit;
+    align-items: center;
+    
+  }
+   li:hover {
+    background: #dcd8d8;
+  }
+
+  li:hover .delete{
+    opacity: 1;
+  }
+  
+  #list input{
+    padding: 0;
+    height: initial;
+    width: initial;
+    margin-bottom: 0;
+    display: none;
+    cursor: pointer;
+  }
+  
+  #list label{
+    position: relative;
+    cursor: pointer;
+  }
+  
+  
+  /* Adding checkbox styling  */
+  #list label:before {
+    content:'';
+    /* -webkit-appearance: none; */
+    background-color: transparent;
+    border: 2px solid #0079bf;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05), inset 0px -15px 10px -12px rgba(0, 0, 0, 0.05);
+    padding: 10px;
+    display: inline-block;
+    position: relative;
+    vertical-align: middle;
+    cursor: pointer;
+    margin-right: 10px;
+  }
+  #list input:checked + label:after {
+    content: '';
+    display: block;
+    position: absolute;
+    top: 2px;
+    left: 9px;
+    width: 6px;
+    height: 14px;
+    border: solid #fff;
+    border-width: 0 2px 2px 0;
+    transform: rotate(45deg);
+  }
+  #list input:checked + label:before {
+    background: #0079bf;
+  } 
+  #list input:checked + label {
+    text-decoration: line-through;
+  }
+
+
+/* Task Delete Button  */
+  .delete {
+      height: 30px;
+      padding: 5px 0px;
+      border-radius: 3px;
+      opacity: 0;
+  }
+  .delete:hover {
+    background: #dcd8d8;
+    /* background: #f2f2f2; */
+    cursor: pointer;
+  }
+  h1 {
+    text-align: center;
+  }
+
+  /* Input Type Text for adding tasks */
+   div{
+    position: relative;
+  } 
+  .form-inputs i{
+    position: absolute;
+    top: 35%;
+    right: 5%;
+    transition: 0.1s ease-in-out;
+  }
+  .form-inputs i:hover{
+    transform: scale(1.5);
+  }
+  
+  .add-task {
+      width: 100%;
+      outline: none;
+      font-size: 15px;
+      padding: 11px;
+      border: 1px solid #f3f3f3;
+      margin-bottom: 3px;
+      border: 2px solid #999999;
+      border-radius: 10px;
+  }
+
+  #container span {
+    margin-bottom: 20px;
+    font-size: 13px;
+    margin-left: 2px;
+    color: white;
+  }
+
+  /* Notification for different actions */
+  #snack-bar{
+    position: fixed;
+    top: 3rem;
+    right: 3rem;
+    border: 2px;
+    border-radius: 5px;
+    color: rgb(193, 64, 64);
+    background-color: rgb(193, 232, 241);
+    width: 15rem;
+    height: 3rem;
+    padding: 0.5rem;
+    font-size: larger;
+    transition: 1s ease-out;
+  }
+  .blank{
+    opacity: 0;
+  }
+  .show{
+    transform: translateX(2);
+    opacity: 1;
+  }

@@ -1,0 +1,49 @@
+<!DOCTYPE html>    
+</body>
+</html>
+<html>
+    <head lang="en">
+      <title>Todo</title>
+      <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
+      <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+      <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+      <h1>Todo List App</h1>
+      <div id="container">
+            <div class="form-inputs">
+              <input placeholder="Add a new task" class="add-task" id="add" />
+              <i id="add-button" class="fa-solid fa-plus"></i>
+            </div>  
+            <div class="status-container">
+              <ul class="status">
+                <li class="action all">All</li>
+                <li class="action pending" >Pending</li>
+                <li class="action complete" >Completed</li>
+                <li class="action completeAll" >Complete All</li>
+                <li class="action clear" >Clear All</li>
+              </ul>
+            </div>
+            <span id="total-tasks">Total tasks: <span id="tasks-counter">0</span></span>
+            <span id="pending-tasks">Pending: <span id="tasks-counter">0</span></span>
+            <span id="completed-tasks">Completed: <span id="tasks-counter">0</span></span>
+            
+            <ul id="list"> 
+            </ul>
+      </div>
+      <div id="snack-bar" class="blank">
+        <span> </span>
+      </div>
+      <script src="script.js"></script>
+      <!-- Scripts -->
+      <script type="text/javascript">
+          toDoList.initiallize();
+      </script>
+    </body>
+  </html>
+
+
+
